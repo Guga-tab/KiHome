@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://b7yd1eiwa4vtp"]
+
+[ext_resource type="Texture2D" uid="uid://2yf1brcudurt" path="res://assets/Snoblin_Pixel_RPG_Prototype_Characters/Characters/Prototype_Character/Default/idle.png" id="1_merdl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lj585"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqjtg"]
+atlas = ExtResource("1_merdl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnu2h"]
+atlas = ExtResource("1_merdl")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbhrr"]
+atlas = ExtResource("1_merdl")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iywne"]
+atlas = ExtResource("1_merdl")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p57ef"]
+atlas = ExtResource("1_merdl")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5sy4"]
+atlas = ExtResource("1_merdl")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lj585"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqjtg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnu2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbhrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iywne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p57ef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5sy4")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="CharacterBody2D" unique_id=328874900]
+position = Vector2(61, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1745039390]
+shape = SubResource("CapsuleShape2D_lj585")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1057824317]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_lj585")
+animation = &"idle"
+autoplay = "idle"
+frame = 5
+frame_progress = 0.3539946

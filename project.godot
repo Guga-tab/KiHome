@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="ki_home"
+run/main_scene="uid://de3me5p3bt3s3"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
-window/stretch/mode="canvas_items"
+window/size/viewport_width=150
+window/size/viewport_height=100
+window/size/mode=2
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [dotnet]
@@ -29,5 +33,6 @@ project/assembly_name="ki_home"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
