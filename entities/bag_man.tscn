@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://y0hjy3k6wfrj"]
+
+[ext_resource type="Script" uid="uid://elhdliahkx6p" path="res://scripts/player.gd" id="1_mijk5"]
+[ext_resource type="Texture2D" uid="uid://06qr16s4jli0" path="res://assets/old_man.png" id="2_mijk5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lj585"]
+radius = 89.0
+height = 294.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pk20"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(0, 313, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m807u"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(246, 313, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33qd6"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(492, 313, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwovf"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(738, 313, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vley0"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(0, 626, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dcvr"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(246, 626, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7neh"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(492, 626, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6joi6"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(738, 626, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmxp1"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(0, 939, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krpnv"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(246, 939, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axklv"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(492, 939, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlsxb"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(738, 939, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmdwp"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(0, 0, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wygfo"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(246, 0, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rjgv"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(492, 0, 246, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h417x"]
+atlas = ExtResource("2_mijk5")
+region = Rect2(738, 0, 246, 313)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kvhnv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pk20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m807u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33qd6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwovf")
+}],
+"loop": 1,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vley0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dcvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7neh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6joi6")
+}],
+"loop": 1,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmxp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krpnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axklv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlsxb")
+}],
+"loop": 1,
+"name": &"right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmdwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wygfo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rjgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h417x")
+}],
+"loop": 1,
+"name": &"up",
+"speed": 8.0
+}]
+
+[node name="BagMan" type="CharacterBody2D" unique_id=328874900]
+script = ExtResource("1_mijk5")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=1745039390]
+shape = SubResource("CapsuleShape2D_lj585")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1057824317]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_kvhnv")
+animation = &"down"
