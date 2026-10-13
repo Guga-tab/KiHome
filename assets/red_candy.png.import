@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbufub7echir"
-path="res://.godot/imported/I2I Remova os detalhes d_10-08_11_40_43.jpg-03d4124e348bb1a6b39b382c54d45358.ctex"
+uid="uid://dryrph5ej7g7y"
+path="res://.godot/imported/red_candy.png-b847955df97b29c5d592613e86f90da8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/I2I Remova os detalhes d_10-08_11_40_43.jpg"
-dest_files=["res://.godot/imported/I2I Remova os detalhes d_10-08_11_40_43.jpg-03d4124e348bb1a6b39b382c54d45358.ctex"]
+source_file="res://assets/red_candy.png"
+dest_files=["res://.godot/imported/red_candy.png-b847955df97b29c5d592613e86f90da8.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cprk5yohrcbfs"
-path="res://.godot/imported/Girl_red.png-c52664bf3f983341e1ee7fdb3ba12535.ctex"
+uid="uid://bxeohvirqdahs"
+path="res://.godot/imported/cupcake.png-7dd1141eef468df34df46f740ddee6bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Girl_red.png"
-dest_files=["res://.godot/imported/Girl_red.png-c52664bf3f983341e1ee7fdb3ba12535.ctex"]
+source_file="res://assets/cupcake.png"
+dest_files=["res://.godot/imported/cupcake.png-7dd1141eef468df34df46f740ddee6bd.ctex"]
 
 [params]
 

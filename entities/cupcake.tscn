@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cb600d4laqujn"]
+
+[ext_resource type="Texture2D" uid="uid://bxeohvirqdahs" path="res://assets/cupcake.png" id="1_iocxf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqstk"]
+atlas = ExtResource("1_iocxf")
+region = Rect2(0, 0, 255, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3nom"]
+atlas = ExtResource("1_iocxf")
+region = Rect2(255, 0, 255, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p6eb"]
+atlas = ExtResource("1_iocxf")
+region = Rect2(510, 0, 255, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fg6t"]
+atlas = ExtResource("1_iocxf")
+region = Rect2(765, 0, 255, 258)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lj585"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqstk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3nom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p6eb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fg6t")
+}],
+"loop": 1,
+"name": &"candy",
+"speed": 5.0
+}]
+
+[node name="Cupcake" type="AnimatedSprite2D" unique_id=514531129]
+scale = Vector2(0.8913044, 1)
+sprite_frames = SubResource("SpriteFrames_lj585")
+animation = &"candy"
+autoplay = "candy"
+frame_progress = 0.5787473
