@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bavnxv160qujh"]
+
+[ext_resource type="Script" uid="uid://d4kkmcq3ss3fs" path="res://scripts/game_over.gd" id="1_wqhvx"]
+[ext_resource type="Texture2D" uid="uid://dshlg1b3g4y56" path="res://assets/game_over.png" id="1_xeevv"]
+
+[node name="GameOver" type="Control" unique_id=2124574023]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wqhvx")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2042407961]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xeevv")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=158055659]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 433.0
+offset_right = 943.0
+offset_bottom = 526.0

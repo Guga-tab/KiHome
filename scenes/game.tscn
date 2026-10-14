@@ -141,10 +141,10 @@ scale = Vector2(0.29302856, 0.368)
 
 [node name="Player" parent="." unique_id=328874900 instance=ExtResource("1_uwrxv")]
 position = Vector2(532, 421)
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.2, 0.2)
 
 [node name="BagMan" parent="." unique_id=891398783 instance=ExtResource("5_p57ef")]
-position = Vector2(887, 151)
+position = Vector2(525, -143)
 scale = Vector2(0.6, 0.6)
 
 [node name="Cupcake" parent="." unique_id=497501916 instance=ExtResource("5_iywne")]
