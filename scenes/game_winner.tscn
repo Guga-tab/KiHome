@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://c1ah20gfdg3jk"]
 
-[ext_resource type="Script" uid="uid://d4kkmcq3ss3fs" path="res://scripts/game_over.gd" id="1_mu6d6"]
+[ext_resource type="Script" uid="uid://swnbxlakjptn" path="res://scripts/game_winner.gd" id="1_mu6d6"]
 [ext_resource type="Texture2D" uid="uid://c26g7lp03wk1e" path="res://assets/game_winner.jpeg" id="2_mu6d6"]
+[ext_resource type="FontFile" uid="uid://dotdlmdf284f2" path="res://fonts/Jersey_10/Jersey10-Regular.ttf" id="3_3banh"]
 
 [node name="GameWinner" type="Control" unique_id=2124574023]
 layout_mode = 3
@@ -36,6 +37,18 @@ offset_left = 800.0
 offset_top = 468.0
 offset_right = 1035.0
 offset_bottom = 531.0
+
+[node name="CandyLabel" type="Label" parent="." unique_id=1346095321]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 130.0
+offset_right = 959.0
+offset_bottom = 169.0
+theme_override_colors/font_color = Color(1, 0.8509804, 0.23137255, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_3banh")
+theme_override_font_sizes/font_size = 35
 
 [connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

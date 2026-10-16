@@ -15,6 +15,10 @@ run/main_scene="uid://k5s03i0n7fe2"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameState="*uid://0558cf3orip6"
+
 [display]
 
 window/size/mode=2

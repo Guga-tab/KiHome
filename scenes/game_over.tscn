@@ -23,9 +23,11 @@ grow_vertical = 2
 texture = ExtResource("1_xeevv")
 expand_mode = 2
 
-[node name="Button" type="Button" parent="." unique_id=158055659]
+[node name="PlayAgain" type="Button" parent="." unique_id=158055659]
 layout_mode = 0
 offset_left = 746.0
 offset_top = 433.0
 offset_right = 943.0
 offset_bottom = 526.0
+
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]

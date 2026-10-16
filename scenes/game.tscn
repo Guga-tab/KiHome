@@ -1,32 +1,34 @@
 [gd_scene format=3 uid="uid://de3me5p3bt3s3"]
 
+[ext_resource type="Script" uid="uid://dfgh3d45mnpeh" path="res://scripts/game.gd" id="1_gee14"]
 [ext_resource type="Texture2D" uid="uid://b02ccmag1wd8" path="res://assets/scenario_empty.jpeg" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://bhecfonlvuy15" path="res://entities/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dco7lna66s300" path="res://entities/chocolate.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b2reongtm1uqp" path="res://entities/red_candy.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cb600d4laqujn" path="res://entities/cupcake.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://y0hjy3k6wfrj" path="res://entities/bag_man.tscn" id="5_p57ef"]
+[ext_resource type="FontFile" uid="uid://dotdlmdf284f2" path="res://fonts/Jersey_10/Jersey10-Regular.ttf" id="8_0tnpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(1549.1868, 16.690125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p57ef"]
-size = Vector2(1561.4742, 18.903004)
+size = Vector2(1561.4742, 19.64944)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
 size = Vector2(480.76398, 85.76518)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lj585"]
-size = Vector2(461.35437, 107.5471)
+size = Vector2(441.1983, 96.65599)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
 size = Vector2(1247.0005, 91.2097)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnpc"]
-size = Vector2(723.2728, 58.77823)
+size = Vector2(723.2728, 66.77208)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
-size = Vector2(904.4029, 24.253258)
+size = Vector2(904.4029, 26.492016)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
 size = Vector2(33.64302, 21.641376)
@@ -45,8 +47,15 @@ parsed_geometry_type = 1
 parsed_collision_mask = 1
 agent_radius = 12.95
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trtic"]
+size = Vector2(100, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hodyn"]
+size = Vector2(100, 86)
+
 [node name="Game" type="Node2D" unique_id=1943465293]
 position = Vector2(53, 49)
+script = ExtResource("1_gee14")
 
 [node name="Scenario" type="Sprite2D" parent="." unique_id=205129691]
 position = Vector2(524.50006, 273)
@@ -67,8 +76,8 @@ position = Vector2(-461.68277, -437.38293)
 scale = Vector2(0.8827586, 1.5875969)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/bottom" unique_id=1904479779]
-position = Vector2(518.91565, 507.41672)
-scale = Vector2(0.9999988, 0.9999987)
+position = Vector2(518.91565, 507.04343)
+scale = Vector2(0.9999986, 0.9999985)
 shape = SubResource("RectangleShape2D_p57ef")
 
 [node name="left" type="StaticBody2D" parent="Scenario" unique_id=757921380]
@@ -86,9 +95,9 @@ position = Vector2(-461.68277, -437.38293)
 scale = Vector2(0.8827586, 1.5875969)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/right" unique_id=549319920]
-position = Vector2(1247.24, 286.69788)
+position = Vector2(1252.6855, 276.61975)
 rotation = 1.5707964
-scale = Vector2(0.9999994, 0.9999994)
+scale = Vector2(0.9999991, 0.99999917)
 shape = SubResource("RectangleShape2D_lj585")
 
 [node name="wall1" type="StaticBody2D" parent="Scenario" unique_id=224602145]
@@ -103,7 +112,7 @@ shape = SubResource("RectangleShape2D_gee14")
 scale = Vector2(1.0000001, 1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Scenario/wall2" unique_id=353360933]
-position = Vector2(-349.70828, 65.7778)
+position = Vector2(-349.70828, 55.703705)
 scale = Vector2(0.77926236, 2.5204594)
 shape = SubResource("RectangleShape2D_0tnpc")
 
@@ -111,7 +120,7 @@ shape = SubResource("RectangleShape2D_0tnpc")
 scale = Vector2(1.0000001, 1)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Scenario/wall3" unique_id=1829664669]
-position = Vector2(332.88385, 65.18518)
+position = Vector2(332.88385, 58.074097)
 scale = Vector2(0.60724986, 6.3527164)
 shape = SubResource("RectangleShape2D_vtaks")
 
@@ -140,20 +149,20 @@ scale = Vector2(0.6072497, 6.3527155)
 shape = SubResource("RectangleShape2D_kvuet")
 
 [node name="chocolate" parent="Scenario" unique_id=514531129 instance=ExtResource("2_lbhrr")]
-position = Vector2(258.59598, 289.43558)
+position = Vector2(258.596, 289.43558)
 scale = Vector2(0.34230042, 0.359)
 
 [node name="Candy" parent="Scenario" unique_id=1022546367 instance=ExtResource("2_lnu2h")]
 position = Vector2(-259.9922, 283.93423)
-scale = Vector2(0.29302856, 0.368)
+scale = Vector2(0.2930286, 0.368)
 
 [node name="Cupcake" parent="Scenario" unique_id=497501916 instance=ExtResource("5_iywne")]
-position = Vector2(287.51788, -103.64209)
-scale = Vector2(0.28512034, 0.28892803)
+position = Vector2(287.51794, -103.64209)
+scale = Vector2(0.28512037, 0.28892803)
 
 [node name="Player" parent="." unique_id=328874900 groups=["player"] instance=ExtResource("1_uwrxv")]
 position = Vector2(532, 421)
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.25, 0.25)
 
 [node name="BagMan" parent="." unique_id=891398783 instance=ExtResource("5_p57ef")]
 position = Vector2(522, 176)
@@ -190,3 +199,48 @@ offset_bottom = 567.0
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1396359503]
 position = Vector2(-10, 0)
 navigation_polygon = SubResource("NavigationPolygon_lj585")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1440206061]
+
+[node name="CandyLabel" type="Label" parent="HUD" unique_id=136463110]
+offset_left = 1027.0
+offset_right = 1067.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 0.8509804, 0.23137255, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("8_0tnpc")
+theme_override_font_sizes/font_size = 35
+
+[node name="TimerLabel" type="Label" parent="HUD" unique_id=1582542921]
+offset_left = 1027.0
+offset_top = 31.0
+offset_right = 1067.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(1, 0.8509804, 0.23137255, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("8_0tnpc")
+theme_override_font_sizes/font_size = 35
+autowrap_mode = 2
+
+[node name="GameTimer" type="Timer" parent="." unique_id=1549312746]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[node name="StairBlock" type="Area2D" parent="." unique_id=1600587285]
+position = Vector2(32, 67)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StairBlock" unique_id=699264795]
+position = Vector2(32, 134)
+shape = SubResource("RectangleShape2D_trtic")
+
+[node name="StairsExit" type="Area2D" parent="." unique_id=453892153]
+position = Vector2(64, 134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StairsExit" unique_id=1240883365]
+position = Vector2(0, 66)
+shape = SubResource("RectangleShape2D_hodyn")
+
+[connection signal="timeout" from="GameTimer" to="." method="_on_gamer_timer_timeout"]

@@ -16,6 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if _reposicionando or not body.is_in_group("player"):
 		return
 	body.doces_coletados += 1
+	get_tree().call_group("game", "add_candy")
 	_reposicionar(body.global_position)
 
 
