@@ -3,7 +3,7 @@ extends Node
 @onready var button: Button = $Button
 
 func _ready() -> void:
-	pass
+	AudioManager.play_end_jingle() 
 	
 
 func _on_play_again_pressed() -> void:

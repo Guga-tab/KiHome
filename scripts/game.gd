@@ -12,12 +12,22 @@ var stairs_open := false
 @onready var stairs_exit: Area2D = $StairsExit
 
 func _ready() -> void:
+	AudioManager.play_music()
+	
 	add_to_group("game")
 	_update_candy_label()
 	stair_block_shape.disabled = true
 	game_timer.timeout.connect(_on_game_timer_timeout)
 	stairs_exit.body_entered.connect(_on_stairs_body_entered)
 
+	var laugh_timer := Timer.new()
+	laugh_timer.one_shot = true
+	add_child(laugh_timer)
+	laugh_timer.timeout.connect(func():
+		AudioManager.play_laugh()
+		laugh_timer.start(randf_range(5.0, 15.0))
+	)
+	laugh_timer.start(randf_range(5.0, 20.0))
 
 func _process(_delta: float) -> void:
 	if not stairs_open:
@@ -28,6 +38,7 @@ func _process(_delta: float) -> void:
 func add_candy() -> void:
 	candies += 1
 	_update_candy_label()
+	AudioManager.play_collect()
 
 
 func _update_candy_label() -> void:

@@ -3,6 +3,26 @@
 [ext_resource type="Script" uid="uid://17n1dpnla6o1" path="res://scripts/game_title.gd" id="1_db77j"]
 [ext_resource type="Texture2D" uid="uid://x2mqhrie8it6" path="res://assets/game_title.jpeg" id="1_ke8lo"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dg1o0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_db77j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ljt7x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j72ot"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bayt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8enjf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aay0u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3o3s0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fo3mb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o0nwa"]
+
 [node name="GameTitle" type="Control" unique_id=181916270]
 layout_mode = 3
 anchors_preset = 15
@@ -28,5 +48,15 @@ offset_left = 764.0
 offset_top = 423.0
 offset_right = 879.0
 offset_bottom = 493.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dg1o0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_db77j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ljt7x")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_j72ot")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1bayt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_8enjf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_aay0u")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_3o3s0")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_fo3mb")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o0nwa")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
