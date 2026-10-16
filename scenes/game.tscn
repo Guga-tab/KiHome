@@ -14,19 +14,19 @@ size = Vector2(1549.1868, 16.690125)
 size = Vector2(1561.4742, 18.903004)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
-size = Vector2(480.76398, 63.98358)
+size = Vector2(480.76398, 85.76518)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lj585"]
-size = Vector2(461.35437, 89.84956)
+size = Vector2(461.35437, 107.5471)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
-size = Vector2(1247.0005, 55.376347)
+size = Vector2(1247.0005, 91.2097)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tnpc"]
-size = Vector2(723.2728, 35.266937)
+size = Vector2(723.2728, 58.77823)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtaks"]
-size = Vector2(904.4029, 14.551955)
+size = Vector2(904.4029, 24.253258)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
 size = Vector2(33.64302, 21.641376)
@@ -36,6 +36,14 @@ size = Vector2(33.64302, 21.408173)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
 size = Vector2(8.905491, 18.609713)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_lj585"]
+vertices = PackedVector2Array(1076.1094, 588.0078, -28.976563, 585.0781, -26.109375, -22.15625, 1078.9766, -31.929688)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-39, -35, -42, 598, 1089, 601, 1092, -45)])
+parsed_geometry_type = 1
+parsed_collision_mask = 1
+agent_radius = 12.95
 
 [node name="Game" type="Node2D" unique_id=1943465293]
 position = Vector2(53, 49)
@@ -68,9 +76,9 @@ position = Vector2(-461.68277, -437.38293)
 scale = Vector2(0.8827586, 1.5875969)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/left" unique_id=817938095]
-position = Vector2(-225.74454, 276.99304)
+position = Vector2(-214.85367, 276.99304)
 rotation = 1.5707964
-scale = Vector2(0.9999993, 0.99999934)
+scale = Vector2(0.9999992, 0.9999993)
 shape = SubResource("RectangleShape2D_u5sy4")
 
 [node name="right" type="StaticBody2D" parent="Scenario" unique_id=872263529]
@@ -78,16 +86,16 @@ position = Vector2(-461.68277, -437.38293)
 scale = Vector2(0.8827586, 1.5875969)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/right" unique_id=549319920]
-position = Vector2(1256.0889, 286.69788)
+position = Vector2(1247.24, 286.69788)
 rotation = 1.5707964
-scale = Vector2(0.99999946, 0.9999995)
+scale = Vector2(0.9999994, 0.9999994)
 shape = SubResource("RectangleShape2D_lj585")
 
 [node name="wall1" type="StaticBody2D" parent="Scenario" unique_id=224602145]
 scale = Vector2(1.0000001, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scenario/wall1" unique_id=1889107278]
-position = Vector2(55.881165, -303.51318)
+position = Vector2(55.881165, -275.06876)
 scale = Vector2(0.8827581, 1.5875955)
 shape = SubResource("RectangleShape2D_gee14")
 
@@ -95,7 +103,7 @@ shape = SubResource("RectangleShape2D_gee14")
 scale = Vector2(1.0000001, 1)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Scenario/wall2" unique_id=353360933]
-position = Vector2(-349.70828, 36.148163)
+position = Vector2(-349.70828, 65.7778)
 scale = Vector2(0.77926236, 2.5204594)
 shape = SubResource("RectangleShape2D_0tnpc")
 
@@ -103,7 +111,7 @@ shape = SubResource("RectangleShape2D_0tnpc")
 scale = Vector2(1.0000001, 1)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Scenario/wall3" unique_id=1829664669]
-position = Vector2(332.88385, 34.37036)
+position = Vector2(332.88385, 65.18518)
 scale = Vector2(0.60724986, 6.3527164)
 shape = SubResource("RectangleShape2D_vtaks")
 
@@ -111,7 +119,7 @@ shape = SubResource("RectangleShape2D_vtaks")
 scale = Vector2(1.0000005, 1)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Scenario/wall4" unique_id=310551412]
-position = Vector2(-78.1134, 11.851868)
+position = Vector2(-76.31093, -11.851839)
 scale = Vector2(0.6072498, 6.3527164)
 shape = SubResource("RectangleShape2D_kvpfn")
 
@@ -119,7 +127,7 @@ shape = SubResource("RectangleShape2D_kvpfn")
 scale = Vector2(1.0000012, 1)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Scenario/wall5" unique_id=124890445]
-position = Vector2(66.69678, 11.40741)
+position = Vector2(67.89852, -14.222219)
 scale = Vector2(0.60724986, 6.3527164)
 shape = SubResource("RectangleShape2D_dinhu")
 
@@ -148,8 +156,12 @@ position = Vector2(532, 421)
 scale = Vector2(0.2, 0.2)
 
 [node name="BagMan" parent="." unique_id=891398783 instance=ExtResource("5_p57ef")]
-position = Vector2(525, -143)
-scale = Vector2(0.6, 0.6)
+position = Vector2(522, 176)
+scale = Vector2(0.4, 0.4)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="BagMan" unique_id=178021740]
+path_desired_distance = 9.0
+target_desired_distance = 9.0
 
 [node name="ReferenceRect1" type="ReferenceRect" parent="." unique_id=857755712 groups=["zonas_spawn"]]
 offset_left = 121.0
@@ -174,3 +186,7 @@ offset_left = 50.0
 offset_top = 397.0
 offset_right = 1007.0
 offset_bottom = 567.0
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1396359503]
+position = Vector2(-10, 0)
+navigation_polygon = SubResource("NavigationPolygon_lj585")
