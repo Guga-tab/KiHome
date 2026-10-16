@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 100.0
+var doces_coletados: int = 0
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:

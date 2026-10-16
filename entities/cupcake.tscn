@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cb600d4laqujn"]
 
 [ext_resource type="Texture2D" uid="uid://bxeohvirqdahs" path="res://assets/cupcake.png" id="1_iocxf"]
+[ext_resource type="Script" uid="uid://22o2xbxujc73" path="res://scripts/cupcake.gd" id="1_uqstk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqstk"]
 atlas = ExtResource("1_iocxf")
@@ -38,9 +39,18 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Cupcake" type="AnimatedSprite2D" unique_id=514531129]
+[sub_resource type="CircleShape2D" id="CircleShape2D_lj585"]
+radius = 84.07735
+
+[node name="Cupcake" type="Area2D" unique_id=1892172940]
+script = ExtResource("1_uqstk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514531129]
 scale = Vector2(0.8913044, 1)
 sprite_frames = SubResource("SpriteFrames_lj585")
 animation = &"candy"
 autoplay = "candy"
 frame_progress = 0.5787473
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=813093007]
+shape = SubResource("CircleShape2D_lj585")

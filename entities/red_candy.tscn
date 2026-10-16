@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b2reongtm1uqp"]
 
+[ext_resource type="Script" uid="uid://b6puxdhwndhft" path="res://scripts/red_candy.gd" id="1_ild2l"]
 [ext_resource type="Texture2D" uid="uid://dryrph5ej7g7y" path="res://assets/red_candy.png" id="1_kq81q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ild2l"]
@@ -38,10 +39,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Red_candy" type="AnimatedSprite2D" unique_id=514531129]
+[sub_resource type="CircleShape2D" id="CircleShape2D_lj585"]
+radius = 90.815025
+
+[node name="RedCandy" type="Area2D" unique_id=1780640178]
+script = ExtResource("1_ild2l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514531129]
 position = Vector2(-13.75, 0)
 scale = Vector2(0.8913044, 1)
 sprite_frames = SubResource("SpriteFrames_lj585")
 animation = &"cupcake"
 autoplay = "cupcake"
 frame_progress = 0.15941675
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=289870938]
+position = Vector2(-13.75, 0)
+scale = Vector2(0.8913044, 1)
+shape = SubResource("CircleShape2D_lj585")

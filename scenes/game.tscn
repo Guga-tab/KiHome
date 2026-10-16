@@ -139,7 +139,11 @@ scale = Vector2(0.34230042, 0.359)
 position = Vector2(-259.9922, 283.93423)
 scale = Vector2(0.29302856, 0.368)
 
-[node name="Player" parent="." unique_id=328874900 instance=ExtResource("1_uwrxv")]
+[node name="Cupcake" parent="Scenario" unique_id=497501916 instance=ExtResource("5_iywne")]
+position = Vector2(287.51788, -103.64209)
+scale = Vector2(0.28512034, 0.28892803)
+
+[node name="Player" parent="." unique_id=328874900 groups=["player"] instance=ExtResource("1_uwrxv")]
 position = Vector2(532, 421)
 scale = Vector2(0.2, 0.2)
 
@@ -147,6 +151,26 @@ scale = Vector2(0.2, 0.2)
 position = Vector2(525, -143)
 scale = Vector2(0.6, 0.6)
 
-[node name="Cupcake" parent="." unique_id=497501916 instance=ExtResource("5_iywne")]
-position = Vector2(763.75, 185.55199)
-scale = Vector2(0.2372549, 0.243783)
+[node name="ReferenceRect1" type="ReferenceRect" parent="." unique_id=857755712 groups=["zonas_spawn"]]
+offset_left = 121.0
+offset_top = 106.0
+offset_right = 441.0
+offset_bottom = 259.0
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="." unique_id=204084562 groups=["zonas_spawn"]]
+offset_left = 592.0
+offset_top = 113.0
+offset_right = 989.0
+offset_bottom = 260.0
+
+[node name="ReferenceRect3" type="ReferenceRect" parent="." unique_id=1747707416 groups=["zonas_spawn"]]
+offset_left = 475.0
+offset_top = 119.0
+offset_right = 564.0
+offset_bottom = 397.0
+
+[node name="ReferenceRect4" type="ReferenceRect" parent="." unique_id=698335717 groups=["zonas_spawn"]]
+offset_left = 50.0
+offset_top = 397.0
+offset_right = 1007.0
+offset_bottom = 567.0

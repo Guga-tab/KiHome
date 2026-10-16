@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c1ah20gfdg3jk"]
+
+[ext_resource type="Script" uid="uid://d4kkmcq3ss3fs" path="res://scripts/game_over.gd" id="1_mu6d6"]
+[ext_resource type="Texture2D" uid="uid://c26g7lp03wk1e" path="res://assets/game_winner.jpeg" id="2_mu6d6"]
+
+[node name="GameWinner" type="Control" unique_id=2124574023]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mu6d6")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2042407961]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 145.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mu6d6")
+expand_mode = 2
+
+[node name="PlayAgain" type="Button" parent="." unique_id=158055659]
+layout_mode = 0
+offset_left = 809.0
+offset_top = 364.0
+offset_right = 1040.0
+offset_bottom = 457.0
+
+[node name="Quit" type="Button" parent="." unique_id=579284732]
+layout_mode = 0
+offset_left = 800.0
+offset_top = 468.0
+offset_right = 1035.0
+offset_bottom = 531.0
+
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

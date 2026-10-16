@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ki_home"
-run/main_scene="uid://de3me5p3bt3s3"
+run/main_scene="uid://k5s03i0n7fe2"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dco7lna66s300"]
 
+[ext_resource type="Script" uid="uid://butp6xw7dwm7" path="res://scripts/chocolate.gd" id="1_4fiwo"]
 [ext_resource type="Texture2D" uid="uid://c0frmyvlso5pr" path="res://assets/chocolate.png" id="1_c4pfj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4fiwo"]
@@ -38,8 +39,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Chocolate" type="AnimatedSprite2D" unique_id=514531129]
+[sub_resource type="CircleShape2D" id="CircleShape2D_lj585"]
+radius = 87.0919
+
+[node name="Chocolate" type="Area2D" unique_id=1802335063]
+script = ExtResource("1_4fiwo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=514531129]
 sprite_frames = SubResource("SpriteFrames_lj585")
 animation = &"cupcake"
 autoplay = "cupcake"
 frame_progress = 0.17048301
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1988953842]
+shape = SubResource("CircleShape2D_lj585")
