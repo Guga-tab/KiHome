@@ -204,8 +204,8 @@ navigation_polygon = SubResource("NavigationPolygon_lj585")
 [node name="HUD" type="CanvasLayer" parent="." unique_id=1440206061]
 
 [node name="CandyLabel" type="Label" parent="HUD" unique_id=136463110]
-offset_left = 1027.0
-offset_right = 1067.0
+offset_left = 1011.0
+offset_right = 1051.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(1, 0.8509804, 0.23137255, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -214,9 +214,9 @@ theme_override_fonts/font = ExtResource("8_0tnpc")
 theme_override_font_sizes/font_size = 35
 
 [node name="TimerLabel" type="Label" parent="HUD" unique_id=1582542921]
-offset_left = 1027.0
+offset_left = 1011.0
 offset_top = 31.0
-offset_right = 1067.0
+offset_right = 1051.0
 offset_bottom = 70.0
 theme_override_colors/font_color = Color(1, 0.8509804, 0.23137255, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -226,7 +226,7 @@ theme_override_font_sizes/font_size = 35
 autowrap_mode = 2
 
 [node name="GameTimer" type="Timer" parent="." unique_id=1549312746]
-wait_time = 25.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 
