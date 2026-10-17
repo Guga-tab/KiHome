@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dryrph5ej7g7y"
-path="res://.godot/imported/red_candy.png-b847955df97b29c5d592613e86f90da8.ctex"
+uid="uid://c26g7lp03wk1e"
+path="res://.godot/imported/game_winner.jpeg-b0931e26c4bd7c2eeb88b1ccd6b15819.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/red_candy.png"
-dest_files=["res://.godot/imported/red_candy.png-b847955df97b29c5d592613e86f90da8.ctex"]
+source_file="res://assets/screens/game_winner.jpeg"
+dest_files=["res://.godot/imported/game_winner.jpeg-b0931e26c4bd7c2eeb88b1ccd6b15819.ctex"]
 
 [params]
 

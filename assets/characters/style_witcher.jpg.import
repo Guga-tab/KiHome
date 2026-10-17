@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cprk5yohrcbfs"
-path="res://.godot/imported/girl_red.png-47e8c82cf1d2312d5caab588000bb2bc.ctex"
+uid="uid://ne5y5aymihv6"
+path="res://.godot/imported/style_witcher.jpg-2a94aeaf5600695cee513f87cb250e11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/girl_red.png"
-dest_files=["res://.godot/imported/girl_red.png-47e8c82cf1d2312d5caab588000bb2bc.ctex"]
+source_file="res://assets/characters/style_witcher.jpg"
+dest_files=["res://.godot/imported/style_witcher.jpg-2a94aeaf5600695cee513f87cb250e11.ctex"]
 
 [params]
 

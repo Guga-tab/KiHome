@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 @export var initial_speed: float = 90.0
-@export var max_speed: float = 200.0
-@export var time_to_max_speed: float = 60.0
+@export var max_speed: float = 150.0
+@export var speed_step_interval: float = 5.0
+@export var speed_step_amount: float = 8.0
 @export var time_to_appear: float = 5.0
 @export var fade_duration: float = 2.0
 @export var chase_delay: float = 1.5
@@ -108,5 +109,5 @@ func _record_trail(delta: float) -> void:
 
 
 func _current_speed() -> float:
-	var t := clampf(_elapsed_time / time_to_max_speed, 0.0, 1.0)
-	return lerpf(initial_speed, max_speed, t)
+	var steps := int(_elapsed_time / speed_step_interval)
+	return minf(initial_speed + steps * speed_step_amount, max_speed)

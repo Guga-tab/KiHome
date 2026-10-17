@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dshlg1b3g4y56"
-path="res://.godot/imported/game_over.png-d3dc1210304ecaab7bc3f281cfa0d72f.ctex"
+uid="uid://cprk5yohrcbfs"
+path="res://.godot/imported/girl_red.png-3c4b5397e39c31e4b5723d25b13aacbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game_over.png"
-dest_files=["res://.godot/imported/game_over.png-d3dc1210304ecaab7bc3f281cfa0d72f.ctex"]
+source_file="res://assets/characters/girl_red.png"
+dest_files=["res://.godot/imported/girl_red.png-3c4b5397e39c31e4b5723d25b13aacbd.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2reongtm1uqp"]
 
-[ext_resource type="Script" uid="uid://b6puxdhwndhft" path="res://scripts/red_candy.gd" id="1_ild2l"]
-[ext_resource type="Texture2D" uid="uid://dryrph5ej7g7y" path="res://assets/red_candy.png" id="1_kq81q"]
+[ext_resource type="Script" uid="uid://b6puxdhwndhft" path="res://scripts/candies/red_candy.gd" id="1_ild2l"]
+[ext_resource type="Texture2D" uid="uid://dryrph5ej7g7y" path="res://assets/candies/red_candy.png" id="1_kq81q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ild2l"]
 atlas = ExtResource("1_kq81q")

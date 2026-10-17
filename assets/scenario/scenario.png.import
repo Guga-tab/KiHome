@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxeohvirqdahs"
-path="res://.godot/imported/cupcake.png-7dd1141eef468df34df46f740ddee6bd.ctex"
+uid="uid://c0wqksgcpy3q1"
+path="res://.godot/imported/scenario.png-b08db9d240a70f8b2c476026da7e4087.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cupcake.png"
-dest_files=["res://.godot/imported/cupcake.png-7dd1141eef468df34df46f740ddee6bd.ctex"]
+source_file="res://assets/scenario/scenario.png"
+dest_files=["res://.godot/imported/scenario.png-b08db9d240a70f8b2c476026da7e4087.ctex"]
 
 [params]
 

@@ -1,30 +1,8 @@
 [gd_scene format=3 uid="uid://c1ah20gfdg3jk"]
 
-[ext_resource type="Script" uid="uid://swnbxlakjptn" path="res://scripts/game_winner.gd" id="1_mu6d6"]
-[ext_resource type="Texture2D" uid="uid://c26g7lp03wk1e" path="res://assets/game_winner.jpeg" id="2_mu6d6"]
+[ext_resource type="Script" uid="uid://swnbxlakjptn" path="res://scripts/scenes/game_winner.gd" id="1_mu6d6"]
+[ext_resource type="Texture2D" uid="uid://c26g7lp03wk1e" path="res://assets/screens/game_winner.jpeg" id="2_mu6d6"]
 [ext_resource type="FontFile" uid="uid://dotdlmdf284f2" path="res://fonts/Jersey_10/Jersey10-Regular.ttf" id="3_3banh"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wqhvx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbwuq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7m3ot"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_racf3"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irg28"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v3hpu"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jtsn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wawo4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8bugq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_56v3a"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o57t2"]
 
 [node name="GameWinner" type="Control" unique_id=2124574023]
 layout_mode = 3
@@ -40,6 +18,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = 6.0
 offset_bottom = 145.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -48,39 +28,18 @@ expand_mode = 2
 
 [node name="PlayAgain" type="Button" parent="." unique_id=158055659]
 layout_mode = 0
-offset_left = 809.0
-offset_top = 364.0
-offset_right = 1040.0
-offset_bottom = 457.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_wqhvx")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tbwuq")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_7m3ot")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_racf3")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_irg28")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_v3hpu")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2jtsn")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_wawo4")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_8bugq")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_56v3a")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_o57t2")
+offset_left = 813.0
+offset_top = 365.0
+offset_right = 1037.0
+offset_bottom = 458.0
 
 [node name="Quit" type="Button" parent="." unique_id=579284732]
 layout_mode = 0
-offset_left = 805.0
-offset_top = 473.0
-offset_right = 1036.0
-offset_bottom = 528.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_wqhvx")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_tbwuq")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_7m3ot")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_racf3")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_irg28")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_v3hpu")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_2jtsn")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_wawo4")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_8bugq")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_56v3a")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_o57t2")
+offset_left = 816.003
+offset_top = 471.68774
+offset_right = 1027.1936
+offset_bottom = 526.166
+rotation = 0.05284041
 
 [node name="CandyLabel" type="Label" parent="." unique_id=1346095321]
 layout_mode = 0

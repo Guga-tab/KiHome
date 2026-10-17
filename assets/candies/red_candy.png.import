@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbufub7echir"
-path="res://.godot/imported/style_red.jpg-e7ecd5c8102db34c90372e59a45d19fa.ctex"
+uid="uid://dryrph5ej7g7y"
+path="res://.godot/imported/red_candy.png-2f9559ae866d3977177a7150a8d00c79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/style_red.jpg"
-dest_files=["res://.godot/imported/style_red.jpg-e7ecd5c8102db34c90372e59a45d19fa.ctex"]
+source_file="res://assets/candies/red_candy.png"
+dest_files=["res://.godot/imported/red_candy.png-2f9559ae866d3977177a7150a8d00c79.ctex"]
 
 [params]
 

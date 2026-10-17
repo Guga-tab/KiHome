@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cb600d4laqujn"]
 
-[ext_resource type="Texture2D" uid="uid://bxeohvirqdahs" path="res://assets/cupcake.png" id="1_iocxf"]
-[ext_resource type="Script" uid="uid://22o2xbxujc73" path="res://scripts/cupcake.gd" id="1_uqstk"]
+[ext_resource type="Texture2D" uid="uid://bxeohvirqdahs" path="res://assets/candies/cupcake.png" id="1_iocxf"]
+[ext_resource type="Script" uid="uid://22o2xbxujc73" path="res://scripts/candies/cupcake.gd" id="1_uqstk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqstk"]
 atlas = ExtResource("1_iocxf")

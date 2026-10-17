@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://de3me5p3bt3s3"]
 
-[ext_resource type="Script" uid="uid://dfgh3d45mnpeh" path="res://scripts/game.gd" id="1_gee14"]
-[ext_resource type="Texture2D" uid="uid://b02ccmag1wd8" path="res://assets/scenario_empty.jpeg" id="1_iywne"]
+[ext_resource type="Script" uid="uid://dfgh3d45mnpeh" path="res://scripts/scenes/game.gd" id="1_gee14"]
+[ext_resource type="Texture2D" uid="uid://b02ccmag1wd8" path="res://assets/scenario/scenario_empty.jpeg" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://bhecfonlvuy15" path="res://entities/player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://dco7lna66s300" path="res://entities/chocolate.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://b2reongtm1uqp" path="res://entities/red_candy.tscn" id="2_lnu2h"]

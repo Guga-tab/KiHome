@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://x2mqhrie8it6"
-path="res://.godot/imported/game_title.jpeg-0534e0b209844a1975d44f083dc1bfa6.ctex"
+uid="uid://c0frmyvlso5pr"
+path="res://.godot/imported/chocolate.png-057f8d2020c47dc2d537077e41f5c8dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game_title.jpeg"
-dest_files=["res://.godot/imported/game_title.jpeg-0534e0b209844a1975d44f083dc1bfa6.ctex"]
+source_file="res://assets/candies/chocolate.png"
+dest_files=["res://.godot/imported/chocolate.png-057f8d2020c47dc2d537077e41f5c8dc.ctex"]
 
 [params]
 

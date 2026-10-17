@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ne5y5aymihv6"
-path="res://.godot/imported/style_witcher.jpg-40ac3445655ccb67466cb15863595d3f.ctex"
+uid="uid://06qr16s4jli0"
+path="res://.godot/imported/old_man.png-71e275cd16748f4a10a031efe068a13f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/style_witcher.jpg"
-dest_files=["res://.godot/imported/style_witcher.jpg-40ac3445655ccb67466cb15863595d3f.ctex"]
+source_file="res://assets/characters/old_man.png"
+dest_files=["res://.godot/imported/old_man.png-71e275cd16748f4a10a031efe068a13f.ctex"]
 
 [params]
 

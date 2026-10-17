@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://y0hjy3k6wfrj"]
 
-[ext_resource type="Script" uid="uid://cyeqw0hlerk1r" path="res://scripts/bag_man.gd" id="1_mijk5"]
-[ext_resource type="Texture2D" uid="uid://06qr16s4jli0" path="res://assets/old_man.png" id="2_mijk5"]
+[ext_resource type="Script" uid="uid://cyeqw0hlerk1r" path="res://scripts/characters/bag_man.gd" id="1_mijk5"]
+[ext_resource type="Texture2D" uid="uid://06qr16s4jli0" path="res://assets/characters/old_man.png" id="2_mijk5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lj585"]
 radius = 89.0
