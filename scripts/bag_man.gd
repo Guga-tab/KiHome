@@ -1,114 +1,112 @@
 extends CharacterBody2D
 
-@export var velocidade_inicial: float = 90.0
-@export var velocidade_maxima: float = 200.0
-@export var tempo_ate_maximo: float = 60.0
-@export var tempo_para_aparecer: float = 5.0
-@export var duracao_fade: float = 2.0
-@export var atraso_perseguicao: float = 1.5
+@export var initial_speed: float = 90.0
+@export var max_speed: float = 200.0
+@export var time_to_max_speed: float = 60.0
+@export var time_to_appear: float = 5.0
+@export var fade_duration: float = 2.0
+@export var chase_delay: float = 1.5
 
-const INTERVALO_RASTRO := 0.1
+const TRAIL_INTERVAL := 0.1
 
-@onready var agente: NavigationAgent2D = $NavigationAgent2D
+@onready var agent: NavigationAgent2D = $NavigationAgent2D
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-@onready var area_captura: Area2D = $AreaCaptura
+@onready var capture_area: Area2D = $CaptureArea
 
 var player: Node2D
-var _tempo := 0.0
-var _acumulado := 0.0
-var _rastro: Array[Vector2] = []
-var _pronto := false
-var _ativo := false
-var _capturou := false
-var _layer_original := 0
+var _elapsed_time := 0.0
+var _accumulated := 0.0
+var _trail: Array[Vector2] = []
+var _is_ready := false
+var _is_active := false
+var _has_captured := false
+var _original_layer := 0
 
 
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player")
 
-	# Começa invisível, sem colisão com o jogador e sem capturar
 	modulate.a = 0.0
-	_layer_original = collision_layer
+	_original_layer = collision_layer
 	collision_layer = 0
-	area_captura.monitoring = false
-	area_captura.body_entered.connect(_on_area_captura_body_entered)
+	capture_area.monitoring = false
+	capture_area.body_entered.connect(_on_capture_area_body_entered)
 
-	# Animação inicial
 	anim.animation = "down"
 	anim.frame = 0
 
 	await get_tree().physics_frame
-	_pronto = true
+	_is_ready = true
 
-	await get_tree().create_timer(tempo_para_aparecer).timeout
-	await _aparecer()
+	await get_tree().create_timer(time_to_appear).timeout
+	await _appear()
 
 
-func _aparecer() -> void:
+func _appear() -> void:
 	var tween := create_tween()
-	tween.tween_property(self, "modulate:a", 1.0, duracao_fade)
+	tween.tween_property(self, "modulate:a", 1.0, fade_duration)
 	await tween.finished
 
-	collision_layer = _layer_original
-	area_captura.monitoring = true
-	_ativo = true
+	collision_layer = _original_layer
+	capture_area.monitoring = true
+	_is_active = true
 
 
 func _physics_process(delta: float) -> void:
-	if not _pronto or player == null or _capturou:
+	if not _is_ready or player == null or _has_captured:
 		return
 
-	_registrar_rastro(delta)
+	_record_trail(delta)
 
-	if not _ativo:
+	if not _is_active:
 		return
 
-	_tempo += delta
+	_elapsed_time += delta
 
-	if agente.is_navigation_finished():
+	if agent.is_navigation_finished():
 		velocity = Vector2.ZERO
 	else:
-		var proximo := agente.get_next_path_position()
-		velocity = global_position.direction_to(proximo) * _velocidade_atual()
+		var next_position := agent.get_next_path_position()
+		velocity = global_position.direction_to(next_position) * _current_speed()
 
 	move_and_slide()
-	_atualizar_animacao()
+	_update_animation()
 
 
-func _on_area_captura_body_entered(body: Node2D) -> void:
-	if _capturou or not body.is_in_group("player"):
+func _on_capture_area_body_entered(body: Node2D) -> void:
+	if _has_captured or not body.is_in_group("player"):
 		return
-	_capturou = true
+	_has_captured = true
 	velocity = Vector2.ZERO
 	get_tree().call_deferred("change_scene_to_file", "res://scenes/game_over.tscn")
 
 
-func _atualizar_animacao() -> void:
+func _update_animation() -> void:
 	if velocity.length() < 1.0:
 		anim.stop()
 		return
 
-	var nome: String
+	var anim_name: String
 	if abs(velocity.x) > abs(velocity.y):
-		nome = "right" if velocity.x > 0 else "left"
+		anim_name = "right" if velocity.x > 0 else "left"
 	else:
-		nome = "down" if velocity.y > 0 else "up"
+		anim_name = "down" if velocity.y > 0 else "up"
 
-	anim.play(nome)
+	anim.play(anim_name)
 
 
-func _registrar_rastro(delta: float) -> void:
-	_acumulado += delta
-	if _acumulado < INTERVALO_RASTRO:
+func _record_trail(delta: float) -> void:
+	_accumulated += delta
+	if _accumulated < TRAIL_INTERVAL:
 		return
-	_acumulado = 0.0
-	_rastro.append(player.global_position)
+	_accumulated = 0.0
+	_trail.append(player.global_position)
 
-	var passos := int(atraso_perseguicao / INTERVALO_RASTRO)
-	if _rastro.size() > passos:
-		agente.target_position = _rastro.pop_front()
+	var steps := int(chase_delay / TRAIL_INTERVAL)
+	if _trail.size() > steps:
+		agent.target_position = _trail.pop_front()
 
 
-func _velocidade_atual() -> float:
-	var t := clampf(_tempo / tempo_ate_maximo, 0.0, 1.0)
-	return lerpf(velocidade_inicial, velocidade_maxima, t)
+func _current_speed() -> float:
+	var t := clampf(_elapsed_time / time_to_max_speed, 0.0, 1.0)
+	return lerpf(initial_speed, max_speed, t)

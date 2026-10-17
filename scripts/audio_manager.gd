@@ -14,16 +14,13 @@ var end_player: AudioStreamPlayer
 
 
 func _ready() -> void:
-	music_player = _make_player(MUSIC, -5.0)
+	music_player = _make_player(MUSIC, -10.0)
 	collect_player = _make_player(SFX_COLLECT)
 	click_player = _make_player(SFX_CLICK)
 	laugh_player = _make_player(SFX_LAUGH)
-	end_player = _make_player(SFX_END, -8.0)
+	end_player = _make_player(SFX_END)
 
-	# Repete a música quando ela termina
 	music_player.finished.connect(music_player.play)
-
-	# Conecta o som de clique em TODO botão que entrar em qualquer cena
 	get_tree().node_added.connect(_on_node_added)
 
 

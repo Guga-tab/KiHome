@@ -11,9 +11,10 @@ var stairs_open := false
 @onready var stair_block_shape: CollisionShape2D = $StairBlock/CollisionShape2D
 @onready var stairs_exit: Area2D = $StairsExit
 
+
 func _ready() -> void:
 	AudioManager.play_music()
-	
+
 	add_to_group("game")
 	_update_candy_label()
 	stair_block_shape.disabled = true
@@ -28,6 +29,7 @@ func _ready() -> void:
 		laugh_timer.start(randf_range(5.0, 15.0))
 	)
 	laugh_timer.start(randf_range(5.0, 20.0))
+
 
 func _process(_delta: float) -> void:
 	if not stairs_open:
@@ -47,12 +49,12 @@ func _update_candy_label() -> void:
 
 func _on_game_timer_timeout() -> void:
 	stairs_open = true
-	stair_block_shape.set_deferred("disabled", true)  # libera a passagem
-	$StairBlock.hide()  # esconda/anime a barreira visual, se houver
+	stair_block_shape.set_deferred("disabled", true)
+	$StairBlock.hide()
 	timer_label.text = "ESCAPE BY THE STAIRS!"
 
 
 func _on_stairs_body_entered(body: Node) -> void:
 	if stairs_open and body.is_in_group("player"):
-		GameState.doces = candies
+		GameState.candies = candies
 		get_tree().change_scene_to_file.call_deferred(WINNER_SCENE)

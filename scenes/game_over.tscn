@@ -3,6 +3,28 @@
 [ext_resource type="Script" uid="uid://d4kkmcq3ss3fs" path="res://scripts/game_over.gd" id="1_wqhvx"]
 [ext_resource type="Texture2D" uid="uid://dshlg1b3g4y56" path="res://assets/game_over.png" id="1_xeevv"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_08qnl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wlp2c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4smnc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjgrh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o3354"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rvx6f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wfxue"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ua7fl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lpuij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bk5yq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_arnu5"]
+
 [node name="GameOver" type="Control" unique_id=2124574023]
 layout_mode = 3
 anchors_preset = 15
@@ -29,5 +51,16 @@ offset_left = 746.0
 offset_top = 433.0
 offset_right = 943.0
 offset_bottom = 526.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_08qnl")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_wlp2c")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4smnc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_gjgrh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_o3354")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_rvx6f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_wfxue")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ua7fl")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lpuij")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_bk5yq")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_arnu5")
 
 [connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]

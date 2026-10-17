@@ -157,9 +157,9 @@ sprite_frames = SubResource("SpriteFrames_kvhnv")
 animation = &"right"
 frame_progress = 0.099727966
 
-[node name="AreaCaptura" type="Area2D" parent="." unique_id=301291874]
+[node name="CaptureArea" type="Area2D" parent="." unique_id=301291874]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaCaptura" unique_id=132875921]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CaptureArea" unique_id=132875921]
 position = Vector2(-3, -10.5)
 shape = SubResource("RectangleShape2D_lj585")
 debug_color = Color(0.31961766, 0.62539345, 0, 0.41960785)
