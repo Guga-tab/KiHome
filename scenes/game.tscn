@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cb600d4laqujn" path="res://entities/cupcake.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://y0hjy3k6wfrj" path="res://entities/bag_man.tscn" id="5_p57ef"]
 [ext_resource type="FontFile" uid="uid://dotdlmdf284f2" path="res://fonts/Jersey_10/Jersey10-Regular.ttf" id="8_0tnpc"]
+[ext_resource type="Script" uid="uid://cn6v2hp3qvoq8" path="res://scripts/joystick.gd" id="9_0tnpc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iywne"]
 size = Vector2(1549.1868, 16.690125)
@@ -242,5 +243,20 @@ position = Vector2(64, 134)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StairsExit" unique_id=1240883365]
 position = Vector2(0, 66)
 shape = SubResource("RectangleShape2D_hodyn")
+
+[node name="TouchControls" type="CanvasLayer" parent="." unique_id=832968138]
+
+[node name="Joystick" type="Control" parent="TouchControls" unique_id=1333851898]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -260.0
+offset_right = 250.0
+offset_bottom = -40.0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("9_0tnpc")
 
 [connection signal="timeout" from="GameTimer" to="." method="_on_gamer_timer_timeout"]
