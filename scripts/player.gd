@@ -6,7 +6,7 @@ var candies_collected: int = 0
 
 
 func _physics_process(delta: float) -> void:
-	var direction := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if direction != Vector2.ZERO:
 		velocity = direction * SPEED
 		_update_animation(direction)
