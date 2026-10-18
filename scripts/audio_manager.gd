@@ -15,10 +15,10 @@ var end_player: AudioStreamPlayer
 
 func _ready() -> void:
 	music_player = _make_player(MUSIC, -10.0)
-	collect_player = _make_player(SFX_COLLECT)
-	click_player = _make_player(SFX_CLICK)
-	laugh_player = _make_player(SFX_LAUGH)
-	end_player = _make_player(SFX_END)
+	collect_player = _make_player(SFX_COLLECT, -5.0)
+	click_player = _make_player(SFX_CLICK, -5.0)
+	laugh_player = _make_player(SFX_LAUGH, -5.0)
+	end_player = _make_player(SFX_END, -5.0)
 
 	music_player.finished.connect(music_player.play)
 	get_tree().node_added.connect(_on_node_added)
