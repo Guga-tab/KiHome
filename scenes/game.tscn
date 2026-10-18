@@ -38,7 +38,7 @@ size = Vector2(33.64302, 21.641376)
 size = Vector2(33.64302, 21.408173)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvuet"]
-size = Vector2(8.905491, 18.609713)
+size = Vector2(10.884233, 25.13944)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lj585"]
 vertices = PackedVector2Array(1076.1094, 588.0078, -28.976563, 585.0781, -26.109375, -22.15625, 1078.9766, -31.929688)
@@ -49,10 +49,10 @@ parsed_collision_mask = 1
 agent_radius = 12.95
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trtic"]
-size = Vector2(100, 86)
+size = Vector2(100, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hodyn"]
-size = Vector2(100, 86)
+size = Vector2(100, 42)
 
 [node name="Game" type="Node2D" unique_id=1943465293]
 position = Vector2(53, 49)
@@ -145,8 +145,8 @@ shape = SubResource("RectangleShape2D_dinhu")
 scale = Vector2(1.0000025, 1)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Scenario/wall6" unique_id=942691571]
-position = Vector2(-496.0197, -197.77779)
-scale = Vector2(0.6072497, 6.3527155)
+position = Vector2(-495.41876, -177.03703)
+scale = Vector2(0.60724956, 6.352715)
 shape = SubResource("RectangleShape2D_kvuet")
 
 [node name="chocolate" parent="Scenario" unique_id=514531129 instance=ExtResource("2_lbhrr")]
@@ -234,14 +234,14 @@ autostart = true
 position = Vector2(32, 67)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StairBlock" unique_id=699264795]
-position = Vector2(32, 134)
+position = Vector2(32, -61.5)
 shape = SubResource("RectangleShape2D_trtic")
 
 [node name="StairsExit" type="Area2D" parent="." unique_id=453892153]
 position = Vector2(64, 134)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StairsExit" unique_id=1240883365]
-position = Vector2(0, 66)
+position = Vector2(0, -128)
 shape = SubResource("RectangleShape2D_hodyn")
 
 [node name="TouchControls" type="CanvasLayer" parent="." unique_id=832968138]

@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://06qr16s4jli0" path="res://assets/characters/old_man.png" id="2_mijk5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lj585"]
-radius = 89.0
-height = 186.0
+radius = 68.0
+height = 240.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6pk20"]
 atlas = ExtResource("2_mijk5")
@@ -143,7 +143,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lj585"]
-size = Vector2(182, 193)
+size = Vector2(182, 225)
 
 [node name="BagMan" type="CharacterBody2D" unique_id=328874900]
 script = ExtResource("1_mijk5")
@@ -160,6 +160,6 @@ frame_progress = 0.099727966
 [node name="CaptureArea" type="Area2D" parent="." unique_id=301291874]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CaptureArea" unique_id=132875921]
-position = Vector2(-3, -10.5)
+position = Vector2(-3, 5.5)
 shape = SubResource("RectangleShape2D_lj585")
 debug_color = Color(0.31961766, 0.62539345, 0, 0.41960785)
