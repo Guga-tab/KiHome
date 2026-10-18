@@ -1,3 +1,52 @@
-# Godot 4+ specific ignores
+# Pasta de importação e cache local do Godot
 .godot/
-/android/
+.import/
+
+# Arquivos de tradução e binários compilados importados
+*.translation
+
+# Arquivos de exportação do jogo (executáveis gerados)
+*.html
+*.pck
+*.zip
+*.tar.gz
+*.exe
+*.apk
+*.aab
+*.ipa
+*.dmg
+
+# Visual Studio Code
+.vscode/
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/qtcreator.json
+!.vscode/c_cpp_properties.json
+
+# JetBrains Rider / CLion / IntelliJ
+.idea/
+
+# Visual Studio
+*.sln
+*.csproj
+.vs/
+
+#S.0.
+
+# Windows
+thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# Arquivos temporários e backups do GIMP
+*.xcf~
